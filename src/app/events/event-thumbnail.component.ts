@@ -19,7 +19,7 @@ export class EventThumbnailComponent implements OnInit {
       return { green: true, bold: true};
     }
     if (this.event && this.event.time === '9:00 am') {
-     // return ["green", "bold"];
+     // return ["green", "bold" ];
      return { green: true, bold: true};
     }
     if (this.event && this.event.time === '10:00 am') {
