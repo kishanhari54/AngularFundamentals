@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventsService {
+
   constructor() {}
 
+
   getEvents(): any {
-    return EVENTS;
+    let sub = new Subject();
+
+    setTimeout( ()=> {sub.next(EVENTS) ; sub.complete();} , 3000);
+    return sub;
+     sub.complete();
+    /* return EVENTS; */
   }
 
   getEvent(id) {
-    debugger;
+
     return EVENTS.find((event) => (event.id == id));
   }
 }
@@ -19,7 +27,7 @@ export class EventsService {
 const EVENTS: any[] = [
   {
     id: 1,
-    name: 'Angular Connesct',
+    name: 'Angular Connect',
     date: '9/26/2036',
     time: '10:00 am',
     price: 599.99,
@@ -322,3 +330,4 @@ const EVENTS: any[] = [
     ],
   },
 ];
+

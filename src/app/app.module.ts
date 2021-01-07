@@ -11,6 +11,8 @@ import {
 } from 'ngx-toastr';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { AppRouteRoutingModule } from './app-route-routing.module';
+import { CreateEventComponent } from './events/create-event/create-event.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AppRouteRoutingModule } from './app-route-routing.module';
     EventsListComponent,
     EventThumbnailComponent,
     NavbarComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CreateEventComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
