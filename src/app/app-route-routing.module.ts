@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'events', component: EventsListComponent , resolve:{events:EventListResolverService}},
   {path: 'events/:id', component: EventDetailsComponent , canActivate: [EventRouteActivatorGuard]},
   {path: '', redirectTo: '/events', pathMatch: 'full'},
+  {path:'user',loadChildren: './user/user.module#UserModule'},
   {path: '**', component: ErrorComponent}
 ];
 
