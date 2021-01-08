@@ -1,1 +1,7 @@
 [0108/091105.020:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0108/162308.438:ERROR:process_memory_win.cc(73)] ReadMemory at 0x5047660 of 28 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0108/162308.442:WARNING:pe_image_reader.cc(171)] could not read data directory from C:\WINDOWS\SYSTEM32\ntd1l.dll
+[0108/162312.087:ERROR:process_memory_win.cc(73)] ReadMemory at 0x5857660 of 28 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0108/162312.087:WARNING:pe_image_reader.cc(171)] could not read data directory from C:\WINDOWS\SYSTEM32\ntd1l.dll
+[0108/162319.755:ERROR:process_memory_win.cc(73)] ReadMemory at 0x5317660 of 28 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0108/162319.755:WARNING:pe_image_reader.cc(171)] could not read data directory from C:\WINDOWS\SYSTEM32\ntd1l.dll

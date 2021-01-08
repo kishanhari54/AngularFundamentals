@@ -14,6 +14,7 @@ import { AppRouteRoutingModule } from './app-route-routing.module';
 
 import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateSessionComponent } from './events/event-details/create-session.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
+    CreateSessionComponent,
     ErrorComponent
   ],
   imports: [
