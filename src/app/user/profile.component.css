@@ -1,0 +1,8 @@
+.error {
+    color: crimson;
+    float: right;
+}
+
+.error input {
+    background-color: pink;
+}

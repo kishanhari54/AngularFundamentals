@@ -13,6 +13,7 @@ import {
 import { AppRouteRoutingModule } from './app-route-routing.module';
 
 import { ErrorComponent } from './error/error.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ErrorComponent } from './error/error.component';
   imports: [
     BrowserModule,
     ToastNoAnimationModule,
+    FormsModule,ReactiveFormsModule,
     ToastrModule.forRoot({
       toastComponent: ToastNoAnimation,
     }),
