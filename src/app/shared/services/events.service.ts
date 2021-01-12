@@ -28,6 +28,18 @@ export class EventsService {
     value.sessions= [];
     EVENTS.push(value)
   }
+
+  addSession(newSession , eventID ) {
+   let event = EVENTS.find((event=> event.id == eventID));
+   newSession.id =  Math.max.apply(null,event.sessions.map(session => session.id))+1;
+   event.sessions.push(newSession);
+   return newSession;
+  }
+
+  updateEvent(event) {
+    let index = EVENTS.findIndex(x => x.id = event.id)
+    EVENTS[index] = event
+  }
 }
 
 const EVENTS: IEvent[] = [

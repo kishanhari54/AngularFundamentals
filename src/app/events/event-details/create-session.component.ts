@@ -1,9 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ISession } from "src/app/shared/services/event.model";
+import { EventsService } from "src/app/shared/services/services";
 import { restrictedWords } from "src/app/shared/validators/restrictedWords";
 
 @Component({
+  selector:'app-create-session',
   templateUrl: "./create-session.component.html",
   styles: [
     `
@@ -42,6 +44,10 @@ export class CreateSessionComponent implements OnInit {
   duration: FormControl;
   level: FormControl;
   abstract: FormControl;
+  @Output() cancelClicked = new EventEmitter();
+  @Output() sessionAdded = new EventEmitter();
+
+constructor( private eventService: EventsService){}
 
   ngOnInit() {
     this.name = new FormControl("", Validators.required);
@@ -74,6 +80,8 @@ export class CreateSessionComponent implements OnInit {
       voters: [],
     };
     console.log(session);
+
+    this.sessionAdded.emit(session);
   }
 
   /* restrictedWords(words)
@@ -86,5 +94,11 @@ export class CreateSessionComponent implements OnInit {
     return invalidWords && invalidWords.length>0 ? { restrictedWords: invalidWords.join(',') } : null;
   }
 } */
+
+
+cancelClick() {
+  //this.newSessionForm.reset;
+  this.cancelClicked.emit("New Session was not added");
+}
 
 }

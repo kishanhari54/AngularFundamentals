@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-10">
+        <div class="well" *ngFor="let session of sessions">
+            <h4>Id : <span class="small">  {{session.id}}</span> </h4>
+            <h4>Name : <span class="small">  {{session.name}}</span> </h4>
+            <h4>Presenter :<span class="small">   {{session.presenter}}</span></h4>
+            <h4>Duration :<span class="small">   {{session.duration}}</span></h4>
+            <h4>Level : <span [ngStyle]="{ 'font-size': 'small'}">  {{session.level}}</span></h4>
+            <h4>Abstract : <span class="small"> {{session.abstract}}</span>
+            </h4>
+        </div>
+    </div>
+</div>

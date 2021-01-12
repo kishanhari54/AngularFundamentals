@@ -1,3 +1,15 @@
 .event-image {
     height: 100px;
 }
+
+h1 .addNewSession {
+    color: red;
+    font-size: medium;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.addNewSession a {
+    cursor: pointer;
+    bottom: 0;
+}
